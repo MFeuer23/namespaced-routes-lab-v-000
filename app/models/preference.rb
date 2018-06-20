@@ -9,7 +9,11 @@ class Preference < ActiveRecord::Base
   end
   
   def self.artist_order
-    
+    if Preference.last.artist_sort_order == "ASC"
+      Artist.all.order(:title)
+    elsif Preference.last_artist_sort_order == "DESC"
+      Artist.all.order(title: :desc)
+    end
   end
 
 end
