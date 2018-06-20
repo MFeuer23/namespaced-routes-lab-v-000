@@ -4,7 +4,7 @@ class Preference < ActiveRecord::Base
     if Preference.last.song_sort_order == "ASC"
       Songs.all.order(:name)
     elsif Preference.last_song_sort_order == "DESC"
-      Songs.all.order(:name :desc)
+      Songs.all.order(name: :desc)
     end
   end
   
