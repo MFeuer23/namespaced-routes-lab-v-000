@@ -18,4 +18,11 @@
   <%= label :allow_create_songs, 'false' %>
   <%= f.radio_button :allow_create_songs, 'false' %>
   
+  <p>Access to Create New Artists</p>
+  <%= label :allow_create_artists, 'true' %>
+  <%= f.radio_button :allow_create_artists, 'true', :checked => true %> 
+  <%= label :allow_create_artists, 'false' %>
+  <%= f.radio_button :allow_create_artists, 'false' %>
+  
+  
 <% end %>
