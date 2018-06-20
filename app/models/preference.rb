@@ -13,10 +13,11 @@ class Preference < ActiveRecord::Base
   end
   
   def self.artist_order
-    if Preference.last.artist_sort_order == "ASC"
-      Artist.all.order(:name)
-    elsif Preference.last.artist_sort_order == "DESC"
-      Artist.all.order(name: :desc)
+    if Preference.last
+      if Preference.last.artist_sort_order == "ASC"
+        Artist.all.order(:name)
+      elsif Preference.last.artist_sort_order == "DESC"
+        Artist.all.order(name: :desc)
     else
       Artist.all    
     end
