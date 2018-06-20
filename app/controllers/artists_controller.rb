@@ -8,6 +8,7 @@ class ArtistsController < ApplicationController
   end
 
   def new
+    if Preference.
     @artist = Artist.new
   end
 
