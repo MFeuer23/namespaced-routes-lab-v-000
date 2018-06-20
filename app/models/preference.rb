@@ -5,6 +5,8 @@ class Preference < ActiveRecord::Base
       Song.all.order(:title)
     elsif Preference.last_song_sort_order == "DESC"
       Song.all.order(title: :desc)
+    else
+      Song.all
     end
   end
   
