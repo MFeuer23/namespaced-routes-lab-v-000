@@ -10,4 +10,8 @@ class Admin::PreferencesController < ApplicationController
   def new
     @preference = Preference.new
   end
+  
+  def create
+    raise params
+  end
 end
