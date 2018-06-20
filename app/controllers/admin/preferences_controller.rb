@@ -1,5 +1,8 @@
 class Admin::PreferencesController < ApplicationController
   def index
-    @preferences = Preference.last
+    if Preference.last
+      @preferences = Preference.last
+    else
+      @preferences = Preference.create()
   end
 end
