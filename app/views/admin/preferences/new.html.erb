@@ -1,4 +1,4 @@
-<%= form_for @preference url: admin_preferences_path do |f| %>
+<%= form_for @preference, url: admin_preferences_path do |f| %>
   <%= f.radio_button("preference", "song_sort_order", "ASC") %>
   <%= radio_button("preference", "song_sort_order", "DESC") %>
 
