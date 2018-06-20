@@ -12,7 +12,7 @@ class Admin::PreferencesController < ApplicationController
   end
   
   def create
-    raise params
+    raise preference_params
   end
   
     private
