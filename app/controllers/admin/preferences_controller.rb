@@ -3,6 +3,6 @@ class Admin::PreferencesController < ApplicationController
     if Preference.last
       @preferences = Preference.last
     else
-      @preferences = Preference.create()
+      @preferences = Preference.create(song_sort_order: "ASC", artist_sort_order: "ASC", allow_create_songs: true, allow_create_artists: true)
   end
 end
