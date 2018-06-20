@@ -13,7 +13,7 @@ class Admin::PreferencesController < ApplicationController
   
   def create
     @preference = Preference.create(preference_params)
-    redirect_to preferences_params
+    redirect_to admin_preferences_path
   end
   
     private
