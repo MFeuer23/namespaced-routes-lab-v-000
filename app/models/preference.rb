@@ -15,6 +15,8 @@ class Preference < ActiveRecord::Base
       Artist.all.order(:name)
     elsif Preference.last.artist_sort_order == "DESC"
       Artist.all.order(name: :desc)
+    else
+      Artist.all    
     end
   end
 
