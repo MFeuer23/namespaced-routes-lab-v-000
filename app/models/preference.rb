@@ -10,9 +10,9 @@ class Preference < ActiveRecord::Base
   
   def self.artist_order
     if Preference.last.artist_sort_order == "ASC"
-      Artist.all.order(:title)
+      Artist.all.order(:name)
     elsif Preference.last_artist_sort_order == "DESC"
-      Artist.all.order(title: :desc)
+      Artist.all.order(title: :name)
     end
   end
 
